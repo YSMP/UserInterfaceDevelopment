@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="side-bar">
+            <h6>Filter Results</h6>
+
+            <h6>Price</h6>
+            <p>$</p>
+            <input type="text">
+            <p>- $</p>
+            <input type="text">
+
+            <h6>Brand</h6>
+            <p>Advance</p>
+            <p>Advantage</p>
+            <p>Advantix</p>
+            <p>black Hawk</p>
+            <p>Brevecto Drontal</p>
+            <p>Frontline Plus</p>
+            <p>Glyde Heartgard</p>
+            <p>Hills Science Diet</p>
+            <p>Interceptor</p>
+            <p>Nextgard Milbemax</p>
+            <p>Optimum</p>
+            <p>Revolution</p>
+            <p>Royal Canin</p>
+            <p>Sashas Blend</p>
+            <p>Snooza</p>
+        </section>
+        <section class="products">
+            <p>40 items found</p>
+            <div class="products-wrapper">
+
+            </div>
+            <p>&lt 1 2 &gt</p>
+        </section>
+    </main>
+
+    <script>
+        fetch("header.html")
+          .then((response) => response.text())
+          .then((data) => document.querySelector("body").insertAdjacentHTML('afterbegin', data));
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => document.querySelector("main").insertAdjacentHTML('afterend', data));
+    </script>
+</body>
+</html>

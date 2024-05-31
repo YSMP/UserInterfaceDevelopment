@@ -3,46 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=dvice-width">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body class="ibm-plex-serif-regular">
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <p style="font-size: 35px;">Stefmar<p>
-                <p style="font-size: 25px;">Pet Care</p>
-            </div>
-            <div class="header-categories">
-                <h4>Home</h4>
-                <h4><a href="search-result.html">Products</a></h4>
-                <h4>About Us</h4>
-            </div>
-            <div class="search">
-                <input type="text" placeholder="Search" class="search-input ibm-plex-serif-regular">
-                <button class="search-button"><i class="icon-search"></i></button>
-            </div>
-            <div class="header-icons">
-                <a class="icon-login"></a>
-                <a class="icon-shopcart" href="shop-cart.html"></a>
-            </div>
-        </div>
-        
-    </header>
-
+    <header id="header"></header>
     <main>
         <section class="home-top">
-            <img src="images/homepage-cover.png" alt="dog_image">
+            <img src="images/homepage-cover.png" alt="cover image" class="cover">
+            <img src="images/homepage-cover-mobile.png" alt="cover image" class="cover-mobile">
             <h1 class="top-message inria-serif-regular">Get Quality<br> Products<br> From Us</h1>
-            <button type="button" class="button-shopNow" onclick="">Shop Now</button>
+            <button type="button" class="button button-shopNow" onclick="location.href='#categories'"><h2>Shop Now</h2></button>
         </section>
         <section style="background-color: #CCE5E5;" class="category-container" id="categories">
-            <h2>Search By Categories</h2>
+            <h2 class="section-heading">Search By Categories</h2>
             <div class="Categories_row1">
-                <div class="item1">
-                    <img src="images/dog(5).webp" alt="Dog" style="border-top-left-radius: 50pt;">
+                <div class="item1" onclick="location.href='search-result.html'">
+                    <img src="images/dog(5).jpg" alt="Dog" style="border-top-left-radius: 50pt;">
                 </div>
                 <div class="item2">
                     <img src="images/bird(3).webp" alt="Bird">
@@ -56,87 +34,22 @@
                     <img src="images/rep(3).jpg" alt="Reptile">
                 </div>
                 <div class="item5">
-                    <img src="images/horse(2).jpg" alt="Horse">
+                    <img src="images/horse(4).jpg" alt="Horse">
                 </div>
                 <div class="item6">
-                    <img src="images/cat(4).jpg" alt="Cat" style="border-bottom-right-radius: 50pt;">
+                    <img src="images/cat(4)-2.jpg" alt="Cat" style="border-bottom-right-radius: 50pt;">
                 </div>
             </div>
         </section>
-        <section>
-            <h2>Featured Products</h2>
-            <div class="product-container horizaontal-scroll">
-                <div class="product-featured">
-                    <img src="images/product(2).jpg" alt="Sashas Blend Joint Health Powder 250g" class="product-img">
-                    <h6>$73.99</h6>
-                    <p>Sashas Blend Joint Health Powder 250g</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/products(1).jpg" alt="API Accu Clear 120ml" class="product-img">
-                    <h6>$15.99</h6>
-                    <p>API Accu Clear 120ml</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/product(9).jpg" alt="Kazoo Classic Soft Walking Harnesse" class="product-img">
-                    <h6>$30.99</h6>
-                    <p>Kazoo Classic Soft Walking Harnesse</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/product(10).jpg" alt="Euro Groom Curved Slicker Brush Soft" class="product-img">
-                    <h6>$30.99</h6>
-                    <p>Euro Groom Curved Slicker Brush Soft</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/product(16).jpg" alt="Advantage Dog 4-10Kg Medium" class="product-img">
-                    <h6>$64.99</h6>
-                    <p>Advantage Dog 4-10Kg Medium</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/product(17).jpg" alt="DogsLife Dog Grooming Wipes" class="product-img">
-                    <h6>$19.99</h6>
-                    <p>DogsLife Dog Grooming Wipes</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/product(5).jpg" alt="Maxpro Pet Deodorant Strawberry 150ml" class="product-img">
-                    <h6>$16.99</h6>
-                    <p>Maxpro Pet Deodorant Strawberry 150ml</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/product(14).jpg" alt="Supervite Gold Active Kangaroo" class="product-img">
-                    <h6>$64.99</h6>
-                    <p>Supervite Gold Active Kangaroo</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/product(20).jpg" alt="Advance Dog Adult Large Breed Ageing Chicken" class="product-img">
-                    <h6>$134.99</h6>
-                    <p>Advance Dog Adult Large Breed Ageing Chicken 2</p>
-                </div>
-                <div class="product-featured">
-                    <img src="images/product(21).jpg" alt="BB Dog Bed 60x48 Bliss Lounger Medium" class="product-img">
-                    <h6>$99.99</h6>
-                    <p>BB Dog Bed 60x48 Bliss Lounger Medium</p>
-                </div>
+        <section style=" padding: 3px;">
+            <h2 class="section-heading">Featured Products</h2>
+            <div id="featuredProducts" class="product-container">
             </div>
         </section>
     </main>
 
-    <footer style="background-color: #CCE5E5;">
-        <div class="footer-container">
-            <div>
-                <h4>Contact</h4>
-                <p>Pet Shop Sydney <br> 517 Bunnerong Rd, Matraville<br> 2036, Sydney, NSW, Australia <br>Tel: 1300 139 756</p>
-            </div>
-            <div>
-                <h4>Deliveries & Returns</h4>
-                <p>Deliveries & Returns</p>
-                <p>Privacy Notice</p>
-                <p>Conditions & Terms</p>
-            </div>
-            <div>
-                <h4>Follow Our Social Media</h4>
-            </div>
-        </div>
-        <p class="copyright">Copyright © 2024 Stefmar Pet Care</p>
-    </footer>
+    
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -6,42 +6,66 @@
     <title>Document</title>
 </head>
 <body class="ibm-plex-serif-regular">
-    <main>
-        <div class="order-wrapper">
-            <section>
-                <h2>Delivery</h2>
+    <header id="header"></header>
+    <main style="margin-bottom: 50px;">
+        <div class="container-empty"></div>
+        <form name="payment-form" onsubmit="return validate_form()">
+            <section class="form-wrapper">
+                <h2 class="section-heading">Delivery</h2>
                 <p>Name on Card</p>
-                <input type="text" name="Name">
+                <input type="text" name="name" required>
                 <p>Card Number</p>
-                <input type="text" name="Card Number">
-                <p>Expiry Date</p>
-                <input type="text" name="Expiry Date">
-                <p>CVV</p>
-                <input type="number" name="CVV">
+                <input type="text" name="card-number" required>
+                <div>
+                    <div>
+                        <p>Expiry Date</p>
+                        <input type="text" class="form-box-short" name="expiry-date" required>
+                    </div>
+                    <div>
+                        <p>CVV</p>
+                        <input type="text" class="form-box-short" name="CVV" required>
+                    </div>
+                </div>
+                
             </section>
-            <section>
-                <h2>Payment</h2>
+            <section class="form-wrapper">
+                <h2 class="section-heading">Payment</h2>
                 <p>Email Adress</p>
-                <input type="text" name="Email Adress">
+                <input type="text" name="email-address" required>
                 <p>First Name</p>
-                <input type="text" name="First Name">
+                <input type="text" name="first-name" required>
                 <p>Last Name</p>
-                <input type="text" name="Last Name">
+                <input type="text" name="last-name" required> 
                 <p>Address</p>
-                <input type="text" name="Address">
+                <input type="text" name="address" required>
                 <p>Suburb</p>
-                <input type="text" name="Suburb">
+                <input type="text" name="suburb" required>
                 <p>City</p>
-                <input type="text" name="City">
-                <p>Postal Code</p>
-                <input type="number" name="Postal Code">
+                <input type="text" name="city" required>
+                <div>
+                    <div>
+                        <p>Postal Code</p>
+                        <input type="text" class="form-box-short" name="postal-code" required>
+                    </div>
+                </div>
                 <p>Country</p>
-                <input type="text" name="Country">
-            </section> 
-        </div>
-
-        <button>Back</button>
-        <button>Confirm Payment</button>
+                <label for="country"></label>
+                <select name="country" id="country">
+                    <option value="Australia"><p>Australia</p></option>
+                    <option value="New Zealand"><p>New Zealand</p></option>
+                    <option value="Japan"><p>Japan</p></option>
+                </select>
+            </section>
+            <div class="buttons-wrapper">
+                <div><button class="button-secondary" onclick="location.href='shop-cart.html'">Back</button></div>
+                <div><button class="button-primary" type="submit" id="form-submit">Confirm Payment</button></div>
+                
+                
+            </div>
+        </form>
+        
     </main>
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
 </body>
 </html>

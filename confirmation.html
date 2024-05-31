@@ -5,21 +5,30 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body class="ibm-plex-serif-regular">
-    <main>
-        <h2>
-            Order Confirmation
-        </h2>
-        <p>
-            Thank you for your order! 
-            Your order has been successfully processed!
-        </p>
-        <p>
-            Your order number is AB0192837
-        </p>
+<body class="ibm-plex-serif-regular text-center">
+    <header id="header"></header>
+    <main style="margin-bottom: 50px;">
+        <div class="container-empty"></div>
+        <div class="confirmation">
+            <h2 class="section-heading">
+                Order Confirmation
+            </h2>
+            <h5>
+                Thank you for <br>your order! 
+            </h5>
+            <h5>
+                Your order has <br>been successfully <br>processed!                
+            </h5>
+            <h5 style="margin: 40px 0;">
+                Your order number is<br> AB0192837
+            </h5>
 
-        <button>Click her to get receipt</button>
-        <button>Go back to Home</button>
+            <button id="receipt-request" class="button-primary">Click here to get receipt</button>
+            <br>
+            <button class="button-secondary" onclick="location.href='index.html'">Go back to Home</button>
+        </div>
     </main>
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
 </body>
 </html>

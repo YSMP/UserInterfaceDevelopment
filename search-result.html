@@ -5,50 +5,182 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body>
-    <main>
-        <section class="side-bar">
+<body class="ibm-plex-serif-regular">
+    <header id="header"></header>
+    <main style="display: flex;">
+        <aside class="side-bar">
+
             <h6>Filter Results</h6>
+            <h6 style="color: #343434;">Price</h6>
+            <div class="price-wrapper">
+                <p>$</p>
+                <input type="text" placeholder="0.00">
+                <p>- $</p>
+                <input type="text" placeholder="100.00">
+            </div>
+            
+            <h6 style="color: #343434;">Brand</h6>
+            
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Advance</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Advantage</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Advantix</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>black Hawk</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Brevecto</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Drontal</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Frontline Plus</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Glyde</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Heartgard</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Hills Science Diet</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Interceptor</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Nextgard</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Milbemax</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Optimum</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Revolution</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Royal Canin</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Sashas Blend</p>
+            </div>
+            <div class="wrapper-flex">
+                <input type="checkbox" class="checkbox">
+                <p>Snooza</p>
+            </div>
 
-            <h6>Price</h6>
-            <p>$</p>
-            <input type="text">
-            <p>- $</p>
-            <input type="text">
-
-            <h6>Brand</h6>
-            <p>Advance</p>
-            <p>Advantage</p>
-            <p>Advantix</p>
-            <p>black Hawk</p>
-            <p>Brevecto Drontal</p>
-            <p>Frontline Plus</p>
-            <p>Glyde Heartgard</p>
-            <p>Hills Science Diet</p>
-            <p>Interceptor</p>
-            <p>Nextgard Milbemax</p>
-            <p>Optimum</p>
-            <p>Revolution</p>
-            <p>Royal Canin</p>
-            <p>Sashas Blend</p>
-            <p>Snooza</p>
-        </section>
-        <section class="products">
+        </aside>
+        <section class="products-display">
             <p>40 items found</p>
             <div class="products-wrapper">
+                <div class="product-box" onclick="location.href='product.html'">
+                    <div class="product">
+                        <img src="images/product(18).jpg" alt="Advantage Dog 10-25Kg Large Red 6 Pack" class="product-img">
+                        <h5 class="price">$87.99</h6>
+                        <p>Advantage Dog 10-25Kg Large Red 6 Pack</p>
+                    </div>   
+                </div>
+                <div class="product-box" onclick="location.href='product2.html'">
+                    <div class="product">
+                        <img src="images/product(15).jpg" alt="Supervite Happy Dog 20kg" class="product-img">
+                        <h5 class="price">$33.99</h6>
+                        <p>Supervite Happy Dog 20kg</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(9).jpg" alt="Kazoo Classic Soft Walking Harnesse Red Puppy" class="product-img">
+                        <h5 class="price">$30.99</h6>
+                        <p>Kazoo Classic Soft Walking Harnesse Red Puppy</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(10).jpg" alt="Euro Groom Curved Slicker Brush Soft Pin" class="product-img">
+                        <h5 class="price">$13.99</h6>
+                        <p>Euro Groom Curved Slicker Brush Soft Pin</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(16).jpg" alt="Advantage Dog 4-10Kg Medium " class="product-img">
+                        <h5 class="price">$64.99</h6>
+                        <p>Advantage Dog 4-10Kg Medium </p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(14).jpg" alt="Supervite Gold Active Kangaroo " class="product-img">
+                        <h5 class="price">$64.99</h6>
+                        <p>Supervite Gold Active Kangaroo </p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(17).jpg" alt="DogsLife Dog Grooming Wipes 100Pack" class="product-img">
+                        <h5 class="price">$19.99</h6>
+                        <p>DogsLife Dog Grooming Wipes 100Pack</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(5).jpg" alt="Maxpro Pet Deodorant Strawberry 150ml" class="product-img">
+                        <h5 class="price">$16.99</h6>
+                        <p>Maxpro Pet Deodorant Strawberry 150ml</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(2).jpg" alt="Sashas Blend Joint Health Powder 250g" class="product-img">
+                        <h5 class="price">$73.99</h6>
+                        <p>Sashas Blend Joint Health Powder 250g</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(2).jpg" alt="Sashas Blend Joint Health Powder 250g" class="product-img">
+                        <h5 class="price">$73.99</h6>
+                        <p>Sashas Blend Joint Health Powder 250g</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(2).jpg" alt="Sashas Blend Joint Health Powder 250g" class="product-img">
+                        <h5 class="price">$73.99</h6>
+                        <p>Sashas Blend Joint Health Powder 250g</p>
+                    </div> 
+                </div>
 
             </div>
             <p>&lt 1 2 &gt</p>
         </section>
     </main>
-
-    <script>
-        fetch("header.html")
-          .then((response) => response.text())
-          .then((data) => document.querySelector("body").insertAdjacentHTML('afterbegin', data));
-        fetch("footer.html")
-          .then((response) => response.text())
-          .then((data) => document.querySelector("main").insertAdjacentHTML('afterend', data));
-    </script>
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
 </body>
 </html>

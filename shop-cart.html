@@ -1,39 +1,45 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
-    <main>
-        <h6>2 products in your cart</h6>
-        <section class="cart-list">
-            <div class="cart-wrapper">
-                <div class="product-ordered">
-                    <img src="images/product(3).jpg" alt="Advantage Dog 10-25Kg Large Red 6 Pack">
-                    <h6>$87.99</h6>
-                    <p>Advantage Dog 10-25Kg Large Red 6 Pack</p>
-                    <div>
-                        <button>-</button>
-                        <p>1</p>
-                        <button>+</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Document</title>
+    </head>
+    <body class="ibm-plex-serif-regular">
+        <header id="header"></header>
+        <main class="cart-list" style="color: #343434;">
+            <div class="container-empty"></div>
+            <h6>2 products in your cart</h6>
+            <section>
+                <div class="cart-wrapper">
+                    <div class="product-ordered" id="product-1">
+                        <img src="images/product(3).jpg" alt="Advantage Dog 10-25Kg Large Red 6 Pack">
+                        <h6 class="price">$87.99</h6>
+                        <p>Advantage Dog 10-25Kg Large Red 6 Pack</p>
+                        <div class="button-quantity">
+                            <button class="button-decrement" id="decrement-1"><i class="icon-decrement"></i></button>
+                            <div class="quantity"><p id="quantity-1"> 1 </p></div>
+                            <button class="button-increment" id="increment-1"><i class="icon-increment"></i></button>
+                        </div>
+                        <i class="icon-delete" id="delete-1"></i>
                     </div>
-                </div>
-                <div class="product-ordered">
-                    <img src="images/product(15).jpg" alt="Supervite Happy Dog 20kg">
-                    <h6>$33.99</h6>
-                    <p>Supervite Happy Dog 20kg</p>
-                    <div>
-                        <button>-</button>
-                        <p>1</p>
-                        <button>+</button>
+                    <div class="product-ordered" id="product-2">
+                        <img src="images/product(15).jpg" alt="Supervite Happy Dog 20kg">
+                        <h6 class="price">$33.99</h6>
+                        <p>Supervite Happy Dog 20kg</p>
+                        <div class="button-quantity">
+                            <button id="decrement-2" class="button-decrement"><i class="icon-decrement"></i></button>
+                            <div class="quantity"><p id="quantity-2"> 1 </p></div>
+                            <button id="increment-2" class="button-increment"><i class="icon-increment"></i></button>
+                        </div>
+                        <i class="icon-delete" id="delete-2"></i>
                     </div>
+                    <h5 id="total">Total: $121.98</h5>
+                    <button class="button-primary button__shopCart" onclick="location.href='order-detail.html'" style="width: 320px;">Proceed to Checkout</button>
                 </div>
-            </div>
-            <p>Total: $121.98</p>
-            <button>Proceed to Checkout</button>
-        </section>
-    </main>
-</body>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+        <script src="script.js"></script>
+    </body>
 </html>

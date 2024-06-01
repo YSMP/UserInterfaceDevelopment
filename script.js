@@ -1,117 +1,3 @@
-
-const header = document.getElementById('header');
-if( header != null) {
-    header.innerHTML = `
-    <div class="header-container">
-        <div class="icon-menu"></div>
-        <div class="logo" onclick="location.href='index.html'">
-            <p class="logo-row-1">Stefmar<p>
-            <p class="logo-row-2">Pet Care</p>
-        </div>
-        <div class="header-categories">
-            <h6><a href="index.html">Home</a></h4>
-            <h6><a href="search-result.html">Products</a></h4>
-            <h6>About Us</h4>
-        </div>
-        
-        <div class="header-icons">
-            <div class="search">
-                <input type="text" placeholder="Search" class="search-input ibm-plex-serif-regular">
-                <button class="search-button" onclick="location.href='search-result.html'"><i class="icon-search-white"></i></button>
-            </div>
-            <div class="icon-search"></div>
-            <div class="icon-login"></div>
-            <div class="icon-shopcart" onclick="location.href='shop-cart.html'"></div>
-        </div>
-    </div>
-    `      
-}
-
-const footer = document.getElementById('footer');
-if( footer != null) {
-    footer.innerHTML = `
-    <div class="footer-container">
-        <div>
-            <h6 style="text-align:center">Contact</h4>
-            <p>Pet Shop Sydney <br> 517 Bunnerong Rd, Matraville<br> 2036, Sydney, NSW, Australia <br>Tel: 1300 139 756</p>
-        </div>
-        <div>
-            <h6 style="text-align:center">Deliveries & Returns</h4>
-            <p>Deliveries & Returns</p>
-            <p>Privacy Notice</p>
-            <p>Conditions & Terms</p>
-        </div>
-        <div>
-            <h6 style="text-align:center">Follow Our Social Media</h4>
-            <div class="footer-icons">
-                <i class="icon-facebook"></i>
-                <i class="icon-X"></i>
-            </div>
-        </div>
-    </div>
-    <p class="copyright">Copyright © 2024 Stefmar Pet Care</p>
-    `      
-}
-
-const featured = document.getElementById('featuredProducts');
-
-if( featured != null) {
-    featured.innerHTML = `
-    
-    <div class="product-featured">
-        <img src="images/product(2).jpg" alt="Sashas Blend Joint Health Powder 250g" class="product-img">
-        <h5 class="price">$73.99</h6>
-        <p>Sashas Blend Joint Health Powder 250g</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/products(1).jpg" alt="API Accu Clear 120ml" class="product-img">
-        <h5 class="price">$15.99</h6>
-        <p>API Accu Clear 120ml</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/product(9).jpg" alt="Kazoo Classic Soft Walking Harnesse" class="product-img">
-        <h5 class="price">$30.99</h6>
-        <p>Kazoo Classic Soft Walking Harnesse</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/product(10).jpg" alt="Euro Groom Curved Slicker Brush Soft" class="product-img">
-        <h5 class="price">$30.99</h6>
-        <p>Euro Groom Curved Slicker Brush Soft</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/product(16).jpg" alt="Advantage Dog 4-10Kg Medium" class="product-img">
-        <h5 class="price">$64.99</h6>
-        <p>Advantage Dog 4-10Kg Medium</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/product(17).jpg" alt="DogsLife Dog Grooming Wipes" class="product-img">
-        <h5 class="price">$19.99</h6>
-        <p>DogsLife Dog Grooming Wipes</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/product(5).jpg" alt="Maxpro Pet Deodorant Strawberry 150ml" class="product-img">
-        <h5 class="price">$16.99</h6>
-        <p>Maxpro Pet Deodorant Strawberry 150ml</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/product(14).jpg" alt="Supervite Gold Active Kangaroo" class="product-img">
-        <h5 class="price">$64.99</h6>
-        <p>Supervite Gold Active Kangaroo</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/product(20).jpg" alt="Advance Dog Adult Large Breed Ageing Chicken" class="product-img">
-        <h5 class="price">$134.99</h6>
-        <p>Advance Dog Adult Large Breed Ageing Chicken 2</p>
-    </div>
-    <div class="product-featured">
-        <img src="images/product(21).jpg" alt="BB Dog Bed 60x48 Bliss Lounger Medium" class="product-img">
-        <h5 class="price">$99.99</h6>
-        <p>BB Dog Bed 60x48 Bliss Lounger Medium</p>
-    </div>
-    
-    `      
-}
-
 /**
  * Changes the quatity of a product (in product page)
  */
@@ -137,7 +23,8 @@ if(increment != null){
     }); 
 }
 
-/**Increases the decreases the quantity of ordered items and changes the 
+/**
+ * Increases the decreases the quantity of ordered items and changes the 
  * total price accordingly
  */
 
@@ -308,26 +195,114 @@ function validate_form(){
  * Deletes products from shopping cart
  */
 
-const buttonDelete1 = document.getElementById("delete-1");
+var delete_count = 0;
+function delete_cart(val){
+    let product = [document.getElementById("product-1"), document.getElementById("product-2")];
+    let price = [87.99, 33.99];
 
-if(buttonDelete1 != null){
-    buttonDelete1.addEventListener("click", function(){
-        document.getElementById("product-1").style.display = "none";
-        let a = document.getElementById("total").innerHTML;
-        a = Number(a.substring(8));
-        a = a-87.99;
-        document.getElementById("total").innerHTML = "Total: $" + parseFloat(a).toFixed(2);
-    })  
+    product[val].style.display = "none";
+    let a = document.getElementById("total").innerHTML;
+    a = Number(a.substring(8));
+    document.getElementById("total").innerHTML = "Total: $" + parseFloat(a-price[val]).toFixed(2);
+    delete_count += 1;
+
+    if(delete_count == product.length){
+       document.getElementById("shop-cart").style.display = "none";
+        document.getElementById("no-product-cart").style.display = "block"; 
+    }   
 }
 
-const buttonDelete2 = document.getElementById("delete-2");
+/**
+ * Shows and hides overlay elements
+ */
 
-if(buttonDelete2 != null){
-    buttonDelete2.addEventListener("click", function(){
-        document.getElementById("product-2").style.display = "none";
-        let a = document.getElementById("total").innerHTML;
-        a = Number(a.substring(8));
-        a = a-33.99;
-        document.getElementById("total").innerHTML = "Total: $" + parseFloat(a).toFixed(2);
-    })
+function overlay_on_search() {
+    if(document.getElementById("overlay-search") != null){
+        if(document.getElementById("overlay-menu").style.display == "block"){
+            document.getElementById("overlay-menu").style.display = "none";
+        }
+        if(document.getElementById("overlay-filter") !=null){
+            if(document.getElementById("overlay-filter").style.display == "block"){
+                document.getElementById("overlay-filter").style.display = "none";
+            }
+        }
+        document.getElementById("overlay-search").style.display = "block";
+    }
 }
+  
+function overlay_off_search() {
+    if(document.getElementById("overlay-search") != null){
+        document.getElementById("overlay-search").style.display = "none";    
+    }
+}
+
+function overlay_menu() {
+    let overlay = document.getElementById("overlay-menu");
+    if(overlay != null){
+        if(overlay.style.display == "none"){
+            if(document.getElementById("overlay-search").style.display == "block"){
+                document.getElementById("overlay-search").style.display = "none";
+            }
+            if(document.getElementById("overlay-filter") != null){
+                if(document.getElementById("overlay-filter").style.display == "block"){
+                    document.getElementById("overlay-filter").style.display = "none";
+                }
+            }
+            overlay.style.display = "block";
+        }else if(overlay.style.display == "block"){
+            overlay.style.display = "none";
+        }
+    }
+}
+
+function filter_overlay(){
+    let filter_item = document.getElementById("filter").innerHTML;
+    document.getElementById("filter-overlay").innerHTML = filter_item;
+    
+    if(document.getElementById("overlay-search").style.display == "block"){
+        document.getElementById("overlay-search").style.display = "none";
+    }
+    if(document.getElementById("overlay-menu").style.display == "block"){
+        document.getElementById("overlay-menu").style.display = "none";
+    }
+
+    if(document.getElementById("overlay-filter").style.display == "block"){
+        document.getElementById("overlay-filter").style.display = "none";
+    }else{
+        document.getElementById("overlay-filter").style.display = "block";
+    }
+}
+
+/**
+ * Switches the product image in product page
+ */
+function switch_image_1(val){
+    let images = ["images/product(18).jpg", "images/product(18)-2.jpg"]
+    let product_img = document.getElementById("product").src;
+
+    let i;
+    for(i = 0; i < images.length; i++){
+        if(product_img.includes(images[i])){
+            break;
+        }
+    }
+
+    document.getElementById("product").src = images[(i+val+images.length)%images.length];
+}
+
+function switch_image_2(val){
+    let images = ["images/product(15).jpg", "images/happy_dog_product.webp"]
+    let product_img = document.getElementById("product").src;
+
+    let i;
+    for(i = 0; i < images.length; i++){
+        if(product_img.includes(images[i])){
+            break;
+        }
+    }
+
+    document.getElementById("product").src = images[(i+val+images.length)%images.length];
+}
+
+
+

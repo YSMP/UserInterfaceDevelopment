@@ -11,10 +11,16 @@
         <section class="product-detail-wrapper" style="background-color: #CCE5E5;">
             <div class="description-wrapper">
                 <div class="description-image">
-                    <img src="images/product(15).jpg" alt="Supervite Happy Dog 20kg">
+                    <div class="product-image">
+                        <i class="icon-previous" onclick="switch_image_2(-1)"></i>
+                        <i class="icon-next" onclick="switch_image_2(1)"></i>
+                        <img src="images/product(15).jpg" alt="Advantage Dog 10-25Kg Large Red 6 Pack" id="product">
+                    </div>
                     <div class="images-option">
-                        <img src="images/product(15).jpg" alt="Supervite Happy Dog 20kg(1)">
-                        <img src="images/happy_dog_product.webp" alt="Supervite Happy Dog 20kg(2)">
+                        <img src="images/product(15).jpg" alt="Supervite Happy Dog 20kg(1)" 
+                            onclick="document.getElementById('product').src='images/product(15).jpg'">
+                        <img src="images/happy_dog_product.webp" alt="Supervite Happy Dog 20kg(2)" 
+                            onclick="document.getElementById('product').src='images/happy_dog_product.webp'">
                     </div>
                 </div>
                 <div class="description">
@@ -35,16 +41,20 @@
                         <button id="increment" class="button-increment"><i class="icon-increment"></i></button>
                     </div>
                     <button id="button" class="button-primary">Add to cart</button>
-                    <h6 class="text-product" id="button-detail">Product Detail</h6>
+                    <div class="wrapper-flex wrapper-detail" style="justify-content: space-between;" id="button-detail">
+                        <h6 class="text-product">Product Detail </h6>
+                        <i class="icon-plus" id="hidden" style="display: inline-block;"></i>
+                        <i class="icon-minus" id="shown" style="display: none;"></i>
+                    </div>
                     <p id="description" class="text-description" style="display: none;">
                         Balanced nutrition for adult dogs
                         <br><br>
                         16% ProteinRepairs Tissue & Builds Muscles8% FATEnergy & StaminaNo 
                         Artificial Coloursor Flavours
                         <br><br><br>
-                        Model: 9343053000971
-                        Shipping Weight: 20 kilos
-                        Product Brand: Supervite
+                        Model: 9343053000971<br>
+                        Shipping Weight: 20 kilos<br>
+                        Product Brand: Supervite<br>
 
                     </p>
                 </div>
@@ -60,6 +70,7 @@
         </section>
     </main>
     <footer id="footer"></footer>
+    <script src="common.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

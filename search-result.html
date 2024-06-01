@@ -7,8 +7,28 @@
 </head>
 <body class="ibm-plex-serif-regular">
     <header id="header"></header>
+
+    <div class="overlay" id="overlay-filter" style="display: none;">
+      <div class="filter-container" >
+        <div style="display: flex;">
+            <div id="filter-overlay"></div> 
+            <div class="icon-close" onclick="filter_overlay()"></div>
+        </div>
+      </div>  
+    </div>
+
+    <div class="search-small-screen">
+        <div class="filter-icon-box" onclick="filter_overlay()">
+            <i class="icon-filter"></i>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search" class="search-input ibm-plex-serif-regular">
+            <button class="search-button" onclick="location.href='search-result.html'"><i class="icon-search-white"></i></button>
+        </div>
+    </div>
+
     <main style="display: flex;">
-        <aside class="side-bar">
+        <aside class="side-bar" id="filter">
 
             <h6>Filter Results</h6>
             <h6 style="color: #343434;">Price</h6>
@@ -89,10 +109,6 @@
                 <input type="checkbox" class="checkbox">
                 <p>Sashas Blend</p>
             </div>
-            <div class="wrapper-flex">
-                <input type="checkbox" class="checkbox">
-                <p>Snooza</p>
-            </div>
 
         </aside>
         <section class="products-display">
@@ -163,16 +179,79 @@
                 </div>
                 <div class="product-box">
                     <div class="product">
-                        <img src="images/product(2).jpg" alt="Sashas Blend Joint Health Powder 250g" class="product-img">
-                        <h5 class="price">$73.99</h6>
-                        <p>Sashas Blend Joint Health Powder 250g</p>
+                        <img src="images/product(21).jpg" alt="BB Dog Bed 60x48 Bliss Lounger Medium" class="product-img">
+                        <h5 class="price">$99.99</h6>
+                        <p>BB Dog Bed 60x48 Bliss Lounger Medium</p>
                     </div> 
                 </div>
                 <div class="product-box">
                     <div class="product">
-                        <img src="images/product(2).jpg" alt="Sashas Blend Joint Health Powder 250g" class="product-img">
-                        <h5 class="price">$73.99</h6>
-                        <p>Sashas Blend Joint Health Powder 250g</p>
+                        <img src="images/product(20).jpg" alt="Advance Dog Adult Large Breed Ageing Chicken 2" class="product-img">
+                        <h5 class="price">$134.99</h6>
+                        <p>Advance Dog Adult Large Breed Ageing Chicken 2</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(22).jpg" alt="Oravet Dental Chews Medium 28Pack for Dogs 11-23kg" class="product-img">
+                        <h5 class="price">$55.99</h6>
+                        <p>Oravet Dental Chews Medium 28Pack for Dogs 11-23kg</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(23).jpg" alt="Revolution Plus for Cats 2.6-5Kg 3Pack" class="product-img">
+                        <h5 class="price">$44.99</h6>
+                        <p>Revolution Plus for Cats 2.6-5Kg 3Pack</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(24).jpg" alt="Bonofido Staydry Mat (Winter) Lrg 90Wx60D cm Red" class="product-img">
+                        <h5 class="price">$49.99</h6>
+                        <p>Bonofido Staydry Mat (Winter) Lrg 90Wx60D cm Red</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(25).jpg" alt="Prime100 Air SPD Lamb Rosemary 120g" class="product-img">
+                        <h5 class="price">$12.99</h6>
+                        <p>Prime100 Air SPD Lamb Rosemary 120g</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(26).jpg" alt="Kazoo Bird Toy Round Rope Anchor with Bell Small" class="product-img">
+                        <h5 class="price">$14.99</h6>
+                        <p>Kazoo Bird Toy Round Rope Anchor with Bell Small</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(27).jpg" alt="Kazoo Bird Toy Two Tier With Log Bell Small" class="product-img">
+                        <h5 class="price">$14.99</h6>
+                        <p>Kazoo Bird Toy Two Tier With Log Bell Small</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(28).jpg" alt="Vetsense Flygon Gold 500m" class="product-img">
+                        <h5 class="price">$50.00</h6>
+                        <p>Vetsense Flygon Gold 500m</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(29).jpg" alt="Supervite Working Dog 20kg Supercoat" class="product-img">
+                        <h5 class="price">$49.99</h6>
+                        <p>Supervite Working Dog 20kg Supercoat</p>
+                    </div> 
+                </div>
+                <div class="product-box">
+                    <div class="product">
+                        <img src="images/product(30).jpg" alt="Supervite Gold Adult Beef 20kg Supercoat" class="product-img">
+                        <h5 class="price">$64.99</h6>
+                        <p>Supervite Gold Adult Beef 20kg Supercoat</p>
                     </div> 
                 </div>
 
@@ -181,6 +260,7 @@
         </section>
     </main>
     <footer id="footer"></footer>
+    <script src="common.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -119,6 +119,7 @@ p{
 
 .section-heading{
     padding: 30px;
+    color: #048181;
 }
 
 .container-empty{
@@ -187,7 +188,7 @@ Button styles and behaviour
 }
 
 header{
-    z-index: 1;
+    z-index: 2;
     background-color: white;
     position: sticky;
     top: 0;
@@ -353,6 +354,44 @@ header{
     color: #343434;
     display: inline-block;
     padding: 5px;
+}
+
+.icon-close{
+    content: url(icons/close.svg);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: auto 0;
+}
+
+.icon-filter{
+    content: url(icons/filter.svg);
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-next{
+    content: url(icons/next.svg);
+    position: absolute;
+    width: 14px;
+    height: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.icon-previous{
+    content: url(icons/previous.svg);
+    position: absolute;
+    width: 14px;
+    height: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
 }
 
 /* ------------------------------------------------------------- */
@@ -571,6 +610,7 @@ input[type="checkbox"]{
     border-radius: 5px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
     margin: auto 0;
+    margin-right: 10px;
 }
 
 input[type="checkbox"]:hover{
@@ -683,7 +723,7 @@ input[type="checkbox"]:checked:before {
 
 .product>img{
     width: 100%;
-    height: 70%;
+    height: 73%;
 }
 
 .product>p{
@@ -717,7 +757,8 @@ product description in product pages
     margin: 0 auto;
 }
 
-.description-image >img{
+.product-image{
+    position: relative;
     width: 40vw;
     height: 40vw;
     min-width: 400px;
@@ -764,7 +805,6 @@ product description in product pages
 .text-description{
     color: #343434;
     padding: 5px 0;
-    text-align: justify;
 }
 
 .text-product{
@@ -851,9 +891,9 @@ product description in product pages
 /* 
 Shopping cart elements
 */
-.cart-list>h6{
+#shop-cart>h6, .no-product-cart > h6{
     text-align: center;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .cart-wrapper{
@@ -1027,6 +1067,130 @@ input[class="form-box-short"]:hover, input[class="form-box-short"]:focus{
 
 /* -------------------------------------------------------- */
 
+/* 
+    search box and hamburger menu overlay
+*/
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.overlay-search-container{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 64px;
+    background-color: #CCE5E5;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+
+.overlay-search-container > .search,
+.search-small-screen > .search{
+    display: flex;
+    height: 33px;
+    align-items: center;
+}
+
+.overlay-search-container > .search > .search-input,
+.overlay-search-container > .search>button,
+.search-small-screen> .search > .search-input,
+.search-small-screen > .search > button{
+    height: 100%;
+    margin: 0;
+}
+
+.overlay-search-container > .search > .search-input,
+.search-small-screen > .search > .search-input{
+    width: 60vw;
+    min-width: 210px;
+}
+
+.overlay-search-container > .search > input:focus,
+.search-small-screen > .search > input:focus{
+    background-color: white;
+}
+
+.menu-container{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    border-top: 5px solid #048181;
+}
+
+.menu-item{
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;     
+}
+
+.menu-item:hover{
+    background-color: #048181;
+    color: white;
+}
+
+.menu-item>div{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #048181;
+    display: flex;
+    align-items: center;
+}
+
+.search-small-screen{
+    display: none;
+    width: 100%;
+    height: 62px;
+    background-color: #CCE5E5;
+    margin: auto ;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+
+.filter-icon-box{
+    background-color: #048181;
+    height: 34px;
+    width: 34px;
+    border-radius: 8px;   
+    margin: auto 0;
+}
+
+/* 
+Filter overlay elements
+*/
+
+.filter-container{
+    position: absolute;
+    border-top: 5px solid #048181;
+    width: 300px;
+    background-color: white;
+    height: 100%;
+    top: 0px;
+    padding: 5px 20px;
+}
+
+.filter-container > div > div > div > p{
+    color: #343434;
+}
+
+.filter-container > div > .icon-close{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+
+/* -------------------------------------------------------- */
 
 @media screen and (max-width : 1100px){
     h1{
@@ -1108,13 +1272,64 @@ input[class="form-box-short"]:hover, input[class="form-box-short"]:focus{
         display: none;
     }
 
+    .search-small-screen{
+        display: flex;
+        
+    }
+
+    .product-ordered{
+        position: relative;
+    }
+
+    .product-ordered > img{
+        position: absolute;
+        max-width: 30vw;
+        max-height: 30vw;
+    }
+
+    .product-ordered > h6{
+        position: absolute;
+        top: 20px;
+        left: 40%;
+    }
+
+    .product-ordered > p{
+        position: absolute;
+        max-width: 40vw;
+        top: 55px;
+        left: 40%;
+    }
+
+    .product-ordered > div{
+        position: absolute;
+        top: 120px;
+        left: 40%;
+    }
+
+    .product-ordered > i{
+        position: absolute;
+        right: 0;
+    }
+
 }
 
 @media screen and (max-width : 600px){
     h1{
         font-size: 37px;
     }
-    
+    .product-image{
+        width: 80vw;
+        height: 80vw;
+        min-width: 100px;
+        min-height: 100px;
+    }
+
+    .button__shopCart{
+        width: 90vw;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (max-width : 450px){

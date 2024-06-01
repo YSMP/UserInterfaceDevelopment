@@ -8,9 +8,9 @@
     <body class="ibm-plex-serif-regular">
         <header id="header"></header>
         <main class="cart-list" style="color: #343434;">
-            <div class="container-empty"></div>
-            <h6>2 products in your cart</h6>
-            <section>
+            <div class="container-empty"></div> 
+            <section id="shop-cart">
+                <h6>2 products in your cart</h6>
                 <div class="cart-wrapper">
                     <div class="product-ordered" id="product-1">
                         <img src="images/product(3).jpg" alt="Advantage Dog 10-25Kg Large Red 6 Pack">
@@ -21,7 +21,7 @@
                             <div class="quantity"><p id="quantity-1"> 1 </p></div>
                             <button class="button-increment" id="increment-1"><i class="icon-increment"></i></button>
                         </div>
-                        <i class="icon-delete" id="delete-1"></i>
+                        <i class="icon-delete" id="delete-1" onclick="delete_cart(0)"></i>
                     </div>
                     <div class="product-ordered" id="product-2">
                         <img src="images/product(15).jpg" alt="Supervite Happy Dog 20kg">
@@ -32,14 +32,24 @@
                             <div class="quantity"><p id="quantity-2"> 1 </p></div>
                             <button id="increment-2" class="button-increment"><i class="icon-increment"></i></button>
                         </div>
-                        <i class="icon-delete" id="delete-2"></i>
+                        <i class="icon-delete" id="delete-2" onclick="delete_cart(1)"></i>
                     </div>
                     <h5 id="total">Total: $121.98</h5>
-                    <button class="button-primary button__shopCart" onclick="location.href='order-detail.html'" style="width: 320px;">Proceed to Checkout</button>
+                    <button class="button-primary button__shopCart" onclick="location.href='order-detail.html'">Proceed to Checkout</button>
                 </div>
+                
+            </section>
+            <section class="no-product-cart" id="no-product-cart" style="display: none;">
+                <h6>No items in your cart</h6>
+
+                <h2 class="section-heading">
+                    Recommended Products
+                </h2>
+                <div id="featuredProducts" class="product-container"></div>
             </section>
         </main>
         <footer id="footer"></footer>
+        <script src="common.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

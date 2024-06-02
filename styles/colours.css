@@ -1,0 +1,386 @@
+
+/* Basic reset and setting of frequently used elements*/
+
+
+
+a{
+    color: #048181;
+}
+
+body{
+    color: #048181;
+}
+
+/* ------------------------------------------------------- */
+
+.icon-delete{
+    color: #343434;
+}
+
+/* ------------------------------------------------------- */
+
+/* Utilities */
+.button:hover{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.section-heading{
+    color: #048181;
+}
+
+.container-empty{
+    background-color: #CCE5E5;
+}
+
+/* ------------------------------------------------------- */
+
+/* 
+Buttons
+*/
+
+.button-primary{
+    background-color: #D2145E;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.button-primary:hover{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.button-secondary{
+    background-color: #8E8E8E;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.button-secondary:hover{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------------------------------------------- */
+
+/* Header elements */
+header{
+    background-color: white;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.search-input{
+    border: 2px solid #F3F3F3;
+    color: grey;
+}
+
+.search > input:focus{
+    border: 2px solid #d6d6d6;
+    color: #343434;
+}
+
+::placeholder {
+    color: grey;
+}
+
+.search-button{
+    background-color: #048181;
+    color: white;
+}
+
+/* ------------------------------------------------------------- */
+
+/* 
+Elements for the cover in the home page
+*/
+
+.price{
+    color: #D2145E;
+}
+
+.home-top{
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.button-shopNow{
+    color: white;
+    background-color: #048181;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+/* ------------------------------------------------------------- */
+
+/* Grid items for categories */
+.Categories_row2>div,
+.Categories_row1>div{
+    background-color: white;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.Categories_row2>div:hover,
+.Categories_row1>div:hover{
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+/* ----------------------------------------------------------- */
+
+/* Horizontal scroll and the container for featured products */
+
+.product-featured > p{
+    color: #343434;
+}
+
+.product-container::-webkit-scrollbar-thumb{
+    background-color: #e9e9e9;
+}
+
+.product-featured{
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.product-featured:hover{
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+/* ----------------------------------------------------------- */
+
+/* Footer elements */
+footer{
+    background-color: #CCE5E5;
+}
+
+footer>p, .footer-container>div>p{
+    color: #434343;
+}
+
+/* -------------------------------------------------------- */
+
+/* 
+Sidebar - Filter section 
+*/
+input[type="checkbox"]{  
+    border: 1px solid #F3F3F3;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"]:checked:before {
+    border-right: 2px solid #048181;
+    border-bottom: 2px solid #048181;
+}
+
+.side-bar > div >p, .price-wrapper>p{
+    color: #343434;
+}
+
+/* -------------------------------------------------------- */
+
+/*
+ Product display 
+*/
+
+.price-wrapper>input{
+    border: 1px solid #F3F3F3;
+}
+
+.price-wrapper>input:focus{
+    border: 1px solid #d6d6d6;
+    color: #343434;
+}
+
+.price-wrapper>input::placeholder{
+    color: #343434;
+}
+
+.product-box{
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.product-box:hover{
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.product > p{
+    color: #343434;
+}
+
+/* -------------------------------------------------------- */
+
+/* 
+product description in product pages
+*/
+
+.product-image{
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.images-option >img{
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.text-description{
+    color: #343434;
+}
+
+.text-product{
+    color: #343434;
+}
+
+.text-company{
+    color: #6D6D6D;
+}
+
+.text-stock{
+    color: #177515;
+}
+
+.colour{
+    border: 2px solid white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button-quantity{
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button-decrement{
+    background-color: #EEEEEE;
+    color: #656565;
+}
+
+.button-increment{
+    background-color: #048181;
+    color: white;
+}
+
+.wrapper-detail{
+    border-bottom: 1px solid #343434;
+}
+
+
+
+.quantity{
+    background-color: white;
+    border: 1px solid #F3F3F3;
+}
+
+.quantity > p{
+   color: #343434;
+}
+
+/* -------------------------------------------------------- */
+
+/* 
+Shopping cart elements
+*/
+
+
+.product-ordered{
+    border-bottom: 1px solid #343434;
+}
+
+/* -------------------------------------------------------- */
+
+/* 
+Elements in confirmation page
+*/
+
+.confirmation>h5{
+    color: #343434;
+}
+
+/* -------------------------------------------------------- */
+
+/* 
+Form
+*/
+
+.form-wrapper > p{
+    color: #343434;
+}
+
+.form-wrapper>input{
+    border: 1px solid #F3F3F3;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    color: #343434;
+}
+
+.form-wrapper>input:hover, .form-wrapper>input:focus{
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);   
+}
+
+select{
+    border: 1px solid #F3F3F3;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    color: #343434;
+}
+
+select:hover, select:focus{
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);   
+}
+
+/* div for shorter input boxes */
+
+.form-wrapper>div>div>p{
+    color: #343434;
+}
+
+input[class="form-box-short"]{
+    border: 1px solid #F3F3F3;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    color: #343434;
+}
+
+input[class="form-box-short"]:hover, input[class="form-box-short"]:focus{
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------------------------------------- */
+
+/* 
+    search box and hamburger menu overlay
+*/
+
+.overlay {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.overlay-search-container{
+    background-color: #CCE5E5;
+}
+
+.overlay-search-container > .search > input:focus,
+.search-small-screen > .search > input:focus{
+    background-color: white;
+}
+
+.menu-container{
+    background-color: white;
+    border-top: 5px solid #048181;
+}
+
+.menu-item:hover{
+    background-color: #048181;
+    color: white;
+}
+
+.menu-item>div{
+    border-bottom: 1px solid #048181;
+}
+
+.search-small-screen{
+    background-color: #CCE5E5;
+}
+
+.filter-icon-box{
+    background-color: #048181;
+}
+
+/* 
+Filter overlay elements
+*/
+
+.filter-container{
+    border-top: 5px solid #048181;
+    background-color: white;
+}
+
+.filter-container > div > div > div > p{
+    color: #343434;
+}

@@ -58,13 +58,13 @@ if( footer != null) {
     <div class="footer-container">
         <div>
             <h6 style="text-align:center">Contact</h4>
-            <p>Pet Shop Sydney <br> 517 Bunnerong Rd, Matraville<br> 2036, Sydney, NSW, Australia <br>Tel: 1300 139 756</p>
+            <p class="text-center">Pet Shop Sydney <br> 517 Bunnerong Rd, Matraville<br> 2036, Sydney, NSW, Australia <br>Tel: 1300 139 756</p>
         </div>
         <div>
             <h6 style="text-align:center">Deliveries & Returns</h4>
-            <p>Deliveries & Returns</p>
-            <p>Privacy Notice</p>
-            <p>Conditions & Terms</p>
+            <p class="text-center">Deliveries & Returns</p>
+            <p class="text-center">Privacy Notice</p>
+            <p class="text-center">Conditions & Terms</p>
         </div>
         <div>
             <h6 style="text-align:center">Follow Our Social Media</h4>
@@ -74,7 +74,7 @@ if( footer != null) {
             </div>
         </div>
     </div>
-    <p class="copyright">Copyright © 2024 Stefmar Pet Care</p>
+    <p class="copyright text-center">Copyright © 2024 Stefmar Pet Care</p>
     `      
 }
 

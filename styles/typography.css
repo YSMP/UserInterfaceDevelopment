@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* Font initialisation */
+.inria-serif-regular {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ibm-plex-serif-regular {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ibm-plex-serif-medium {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* font sizes */
+
+h1{
+    font-size: 70px;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+h4{
+    font-size: 30px;
+}
+
+h5{
+    font-size: 25px;
+}
+
+h6{
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+p{
+    font-size: 16px;
+}
+
+/* text alignment */
+
+a{
+    text-decoration: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.price-wrapper>input:focus{
+    text-align: center;
+}
+
+.products-display>p{
+    text-align: center;
+}
+
+
+
+.text-product,
+.text-company{
+    text-align: left;
+}
+
+.product-ordered>p{
+    text-align: left;
+}
+
+.quantity{
+    text-align: center;
+}
+
+#shop-cart>h6, .no-product-cart > h6{
+    text-align: center;
+}
+
+.cart-wrapper{
+    text-align: right;
+}
+
+.product>p{
+    text-overflow: ellipsis;
+}
+
+/* font sizes of specific elements */
+.logo-row-1{
+    font-size: 35px;
+}
+
+.logo-row-2{
+    font-size: 25px;
+}
+
+.logo>p{
+    text-align: center;
+    line-height: .9;
+}
+
+.button-primary, .button-secondary{
+    font-size: 25px;
+}
+
+.button-decrement{
+    font-size: 30px;
+}
+
+.quantity > p,
+.confirmation>button{
+    font-size: 20px; 
+}
+
+/* Change in font sizes based on screen size */
+
+@media screen and (max-width : 1100px){
+    h1{
+        font-size: 55px;
+    }
+
+    .button>h2{
+        font-size: 30px;
+    }
+    
+}
+
+
+@media screen and (max-width : 800px){
+    h1{
+        font-size: 45px;
+    }
+
+    .section-heading{
+        font-size: 35px;
+    }
+
+    .logo-row-1{
+        font-size: 30px;
+    }
+
+    .logo-row-2{
+        font-size: 20px;
+    }
+
+    .button-shopNow>h2{
+        font-size: 20px
+    }
+}
+
+@media screen and (max-width : 600px){
+    h1{
+        font-size: 37px;
+    }
+}
+
+@media screen and (max-width : 450px){
+    h1{
+        font-size: 30px;
+    }
+
+    .section-heading{
+        font-size: 30px;
+    }
+}

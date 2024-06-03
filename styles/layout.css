@@ -756,7 +756,7 @@ form{
 
 .form-wrapper{
     width: 50%;
-    min-width: 370px;
+    min-width: 320px;
     margin: 0 auto;
 }
 
@@ -964,6 +964,15 @@ Filter overlay elements
         left: 50%;
         transform: translateX(-50%);
         top: auto;
+    }
+
+    .form-wrapper{
+        min-width: 90vw;
+        margin: 0 auto;
+    }
+
+    .buttons-wrapper > div{
+        min-width: 90vw;
     }
 
     .cover{

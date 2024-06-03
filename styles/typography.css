@@ -117,6 +117,10 @@ a{
     font-size: 30px;
 }
 
+.form-wrapper > div > div > p{
+    white-space: nowrap;
+}
+
 .quantity > p,
 .confirmation>button{
     font-size: 20px; 
@@ -171,5 +175,10 @@ a{
 
     .section-heading{
         font-size: 30px;
+    }
+
+    .form-wrapper > div > div > p, 
+    .form-wrapper > p{
+        padding-left: 30px;
     }
 }
